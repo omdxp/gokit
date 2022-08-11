@@ -23,6 +23,8 @@ func NewHTTPServer(ctx context.Context, endpoints Endpoints) http.Handler {
 		decodeEmailReq,
 		encodeResponse,
 	))
+
+	return r
 }
 
 func commonMiddleware(next http.Handler) http.Handler {
